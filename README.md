@@ -15,7 +15,7 @@ This service requires Twitter Bootstrap for the styles (tested with 3.3.5) and A
 
 ```
 
-A more complete example can be found at JSFiddle: [https://jsfiddle.net/](https://jsfiddle.net/)
+A more complete example can be found at JSFiddle: [https://jsfiddle.net/0rwc8oez/](https://jsfiddle.net/0rwc8oez/)
 
 ## Changelog
 ### v0.1
