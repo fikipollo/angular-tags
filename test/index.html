@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular tags demo</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" >
+	<link href="angular-tags.min.css" rel="stylesheet" >
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+</head>
+<body ng-app="ang-tags" ng-init="mytags=['Valencia']; mytags2=['Madrid', 'Bilbao']; mytags3=['Dangerous']; editable=false;">
+	<div style="padding: 20px 40px;">
+		<form name="form" action="#" method="post">
+			<div class="form-group">
+				<label style="text-align:right;" for="mytags">Tags 1:</label>
+				<tag-field
+					name="mytags"
+					ng-model="mytags"
+					editable="editable"
+					options="[{'key':1, 'value':'Madrid'},{'key':2, 'value':'Barcelona'},{'key':3, 'value':'Valencia'},{'key':4, 'value':'Sevilla'},{'key':5, 'value':'Bilbao'}]" >
+				</tag-field>
+				<a class="btn btn-sm btn-warning ng-binding" ng-click="editable=!editable" style="margin-top: 10px; ">{{editable?"Disable":"Enable"}} edit</a>
+			</div>
+			<div class="form-group">
+				<label for="mytags2">Tags 2:</label>
+				<tag-field
+					editable=true
+					name="mytags2"
+					ng-model="mytags2"
+					options="[{'key':1, 'value':'Madrid'},{'key':2, 'value':'Barcelona'},{'key':3, 'value':'Valencia'},{'key':4, 'value':'Sevilla'},{'key':5, 'value':'Bilbao'}]"
+					popular="[{'key':1, 'value':'Madrid'},{'key':2, 'value':'Barcelona'},{'key':3, 'value':'Valencia'}]" >
+				</tag-field>
+			</div>
+			<div class="form-group">
+				<label style="text-align:right;" for="mytags">Tags 3:</label>
+				<tag-field editable=true name="mytags3" class="tag-danger" ng-model="mytags3"></tag-field>
+			</div>
+		</form>
+		<div>
+			<h4>Value for Tags 1 is {{mytags;}}</h4>
+			<h4>Value for Tags 2 is {{mytags2;}}</h4>
+			<h4>Value for Tags 3 is {{mytags3;}}</h4>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="angular-tags.min.js"></script>
+</body>
+</html>
