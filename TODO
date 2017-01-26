@@ -1,0 +1,3 @@
+- Change "editable" by "ng-readonly"
+- Add "required" attr
+- Add http request to get options and popular tags
